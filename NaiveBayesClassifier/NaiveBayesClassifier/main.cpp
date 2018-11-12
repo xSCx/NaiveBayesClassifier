@@ -18,9 +18,10 @@ int main()
 {
     ifstream training("/Users/wangyuchen/Desktop/training.txt");
     
-    vector<map<string,int>> author;
+    vector< map<string,int> > author;
     map<string,int> *temp;
-    for(int i=0; i<15; i++){
+    for(int i=0; i<15; i++)
+    {
         temp = new map<string,int>;
         author.push_back(*temp);
     }
@@ -55,7 +56,7 @@ int main()
                 map<string, int>::iterator it;
                 while(int i = read.find(' '))
                 {
-                    WordCount[Label-1] += 1;
+                    
                     buffer = read.substr(0,i);
                     if(i == -1)
                     {
@@ -73,11 +74,13 @@ int main()
                         author.at(Label-1)[buffer] += 1;
                     }
                     read = read.substr(i+1);
+                    WordCount[Label-1] += 1;
                 }
-                cout<<WordCount[0]<<endl;
             }
             training.close();
-            
+            cout<<DocCount[1]<<endl;
+            cout<<WordCount[1]<<endl;
+            cout<<hhh<<endl;
         }
     }
 }
