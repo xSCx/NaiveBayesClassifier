@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95C146372198F4FE007C28D6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95C146362198F4FE007C28D6 /* main.cpp */; };
+		95C146372198F4FE007C28D6 /* NaiveBayesClassifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95C146362198F4FE007C28D6 /* NaiveBayesClassifier.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		95C146332198F4FE007C28D6 /* NaiveBayesClassifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NaiveBayesClassifier; sourceTree = BUILT_PRODUCTS_DIR; };
-		95C146362198F4FE007C28D6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		95C146362198F4FE007C28D6 /* NaiveBayesClassifier.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NaiveBayesClassifier.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		95C146352198F4FE007C28D6 /* NaiveBayesClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				95C146362198F4FE007C28D6 /* main.cpp */,
+				95C146362198F4FE007C28D6 /* NaiveBayesClassifier.cpp */,
 			);
 			path = NaiveBayesClassifier;
 			sourceTree = "<group>";
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C146372198F4FE007C28D6 /* main.cpp in Sources */,
+				95C146372198F4FE007C28D6 /* NaiveBayesClassifier.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,18 +239,28 @@
 		95C1463B2198F4FE007C28D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42F9QWRL5D;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
 		95C1463C2198F4FE007C28D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 42F9QWRL5D;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				OTHER_CPLUSPLUSFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
