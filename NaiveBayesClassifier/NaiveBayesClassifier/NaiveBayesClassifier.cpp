@@ -21,7 +21,7 @@ const int length = 2;
 
 int Classify(map<string, int> *Doc_train, vector<map<string, int>> *DocWordCounter, vector<double> *P_Docs, vector<double> *Num_Word)
 {
-    double MaxProb = -9999999999;
+    double MaxProb = -9999999;
     double Prob = 0;
     int Label;
     for (int k = 0; k < 15; k++)
@@ -86,7 +86,7 @@ int main()
     vector<double> *Num_Word = new vector<double>(15);
     double Num_Words = 0;
     
-    //
+    //读取training
     ifstream training("/Users/wangyuchen/Documents/Github/NaiveBayesClassifier/training.txt", ios::in);
     string str;
     string buffer;
@@ -105,6 +105,7 @@ int main()
             str = buffer.substr(0, i);
             buffer = buffer.substr(i + 1);
             if (str.size() < length)continue;
+            //int origin = str.find('s');
             Num_Words++;
             Num_Word->at(order - 1)++;
             workhard(DocWordCounter, str, order);
@@ -136,6 +137,7 @@ int main()
             read_test = buffer_test.substr(0, i);
             buffer_test = buffer_test.substr(i + 1);
             if (read_test.size() < length)continue;
+            
             testeasily(test_doc, read_test);
         }
         testdoc_counter->push_back(*test_doc);
