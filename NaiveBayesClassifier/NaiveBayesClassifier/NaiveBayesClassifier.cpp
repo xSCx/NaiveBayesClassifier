@@ -87,10 +87,9 @@ int main()
     double Num_Words = 0;
     
     //读取training
-    ifstream training("/Users/wangyuchen/Documents/Github/NaiveBayesClassifier/training.txt", ios::in);
+    ifstream training("~/NaiveBayesClassifier/training.txt", ios::in);
     string str;
     string buffer;
-    int DocCount = 0;
     while(getline(training, buffer))
     {
         DocCount++;
@@ -119,7 +118,7 @@ int main()
     training.close();
     Middle = time(NULL);
     
-    ifstream testing("/Users/wangyuchen/Documents/Github/NaiveBayesClassifier/testing.txt", ios::in);
+    ifstream testing("~/NaiveBayesClassifier/testing.txt", ios::in);
     vector<map<string, int>> *testdoc_counter = new vector<map<string, int>>;
     map<string, int> *test_doc;
     vector<int> *Label_expect = new vector<int>;
@@ -158,7 +157,7 @@ int main()
     double Accuracy_test = (double)correct_test / Total_test;
     
     //
-    ifstream train("/Users/wangyuchen/Documents/Github/NaiveBayesClassifier/training.txt", ios::in);
+    ifstream train("~/NaiveBayesClassifier/training.txt", ios::in);
     vector<map<string, int>> *doccount_train = new vector<map<string, int>>;
     map<string, int> *doc_train;
     vector<int> *Labels_train = new vector<int>;
